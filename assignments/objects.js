@@ -71,6 +71,10 @@ console.log(intern5.gender)
 console.log("Hello, my name is" + intern2.name)
 // Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
 //console.log(antonietta.multiplyNums(3,4));
+const letMultiply = function(x,y)  {return x*y;}
+intern5.multiplyNums = letMultiply;
+console.log(intern5.multiplyNums (3,4));
+
 // === Great work! === Head over to the the arrays.js file or take a look at the stretch challenge
 
 // ==== Stretch Challenge: Nested Objects and the this keyword ==== 
@@ -101,19 +105,18 @@ console.log(parent.child.age);
 console.log(parent.child.grandchild.age, parent.child.grandchild.name);
 // Have the parent speak
 parent.speak = function(){
-  return "Hello there, my children!"
+ return "Hello there, my children!"
 }
-
-console.log(parent.speak);
+console.log(parent.speak());
 // Have the child speak
 parent.child.speak = function(){
   return "Hello mom, hello dad, hello siblings!"
 }
 
-console.log(parent.child.speak);
+console.log(parent.child.speak());
 // Have the grandchild speak
 parent.child.grandchild.speak = function(){
   return "hello, I am grandchild!"
 }
 
-console.log(parent.child.grandchild.speak);
+console.log(parent.child.grandchild.speak());
